@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Character Counter</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="counter-box">
+    <h1>Character Counter</h1>
+    <textarea id="textInput" maxlength="200" placeholder="Type something..."></textarea>
+    <p><span id="count">0</span> / 200</p>
+  </div>
+  <script >
+    const textInput = document.getElementById('textInput');
+const count = document.getElementById('count');
+
+textInput.addEventListener('input', () => {
+  count.textContent = textInput.value.length;
+});
+
+  </script>
+</body>
+</html>
